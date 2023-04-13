@@ -14,6 +14,7 @@ div.secondLine {
 div.grid-container>div {
     padding: 20px 0;
     font-size: 30px;
+    position: relative;
 }
 
 div.grid-container {
@@ -34,8 +35,8 @@ div.grid-container {
 
 img#loader {
     position: absolute;
-    top: 44%;
-    left: 32%;
+    top: 46%;
+    left: 47%;
     transform: translate(50%, 50%);
 }
 
