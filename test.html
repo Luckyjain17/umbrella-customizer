@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="./umbrella.css">
+</head>
+
+
+<script src="umbrella.js">
+
+</script>
+
+<body id="body" style="background-color: lightblue;">
+  <div class="grid-container">
+    <div>
+      <!-- ------- loader, Umbrella, Logo Image  -->
+      <img id="loader" src="/image/loader_icon.svg" alt="loader" style="visibility: hidden;">
+      <div style="position: relative;">
+        <img id="umbrella_img" src="image/Blue umbrella.png" alt="blueUmbrella" class="image">
+        <img id="uploadFile" class="uplaodLogo"></img>
+      </div>
+    </div>
+    <div class="rightPortion">
+      <div class="firstLine">
+        <span
+          style="font-weight: bold;font-size: 40px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; padding-bottom: 30px;">Custom
+          Umbrella<br></span>
+
+        <!-- ------------- color dots to change the color of umbrella -------------- -->
+        <div style="text-align:center; padding: 21px 21px 21px 0px; display: flex;">
+          <span class="dot" style="background-color: rgb(57, 146, 209);" onclick="handleChangeColor('blue')"></span>
+          <span class="dot" style="background-color: rgb(209, 57, 113);" onclick="handleChangeColor('pink')"></span>
+          <span class="dot" style="background-color: rgb(255, 230, 0);" onclick="handleChangeColor('yellow')"></span>
+        </div>
+        <span
+          style="font-weight: bold; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Custmize
+          your umbrella<br></span>
+        <span style="font-size: 15px;">Upload a logo for an instant preview.<br></span>
+        <span style="font-size: 12px;">.png and .jpg only. Max file size is 5MB.<br></span>
+
+        <div class="image-upload">
+
+          <!-- ------------- Uploaded image tags ---------------- -->
+          <label for="file-input" id="label">
+            <img id="upload_img" src="/image/upload_icon.svg" alt="upload_icon"
+              style="position:absolute;padding: 4px; cursor: pointer;" onclick="hanldeLoader(true)">
+          </label>
+
+          <input id="file-input" type="file" onchange="javascript:updateList()" />
+        </div>
+
+        <!-- --------------upload button --------------- -->
+
+        <img id="loaderUpdate" src="/image/loader_icon.svg" alt="loader"
+          style="visibility: hidden;position:absolute;padding: 4px;height: 24px;">
+
+        <button id="button" style="background-color: rgb(49, 195, 244);" onclick="handleChangeColor(true)">UPLOAD
+          LOGO</button>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
